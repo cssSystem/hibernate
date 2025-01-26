@@ -18,17 +18,17 @@ public class GetController {
 
     @GetMapping("/persons/by-city")
     public List<Person> getPersonsByCity(@RequestParam(value = "city") String city) {
-        return personRepository.getPersonByCityOfLiving(city);
+        return personRepository.getPersonByCity(city);
     }
 
     @GetMapping("/persons/by-age")
     public List<Person> getPersonsByAge(@RequestParam(value = "age") int age) {
-        return personRepository.getPersonByPersonPrimaryKey_AgeIsLessThan(age, Sort.by("personPrimaryKey.age").ascending());
+        return personRepository.getPersonByAge(age, Sort.by("personPrimaryKey.age").ascending());
     }
 
     @GetMapping("/persons/by-nameSurname")
     public Optional<Person> getPersonsByNameAndSurname(@RequestParam(value = "name") String name, @RequestParam(value = "surname") String surname) {
-        return personRepository.getPersonByPersonPrimaryKey_NameAndPersonPrimaryKey_Surname(name, surname);
+        return personRepository.getPersonByNameAndSurname(name, surname);
     }
 
 }
