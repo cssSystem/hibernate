@@ -28,15 +28,15 @@ public class TemApplication implements CommandLineRunner {
 
         person.add(Person.builder().personPrimaryKey(
                         PersonPrimaryKey.builder().age(20).name("Саша").surname("Михайлов").build()
-                ).phone_of_number("800").city_of_living("Москва").build()
+                ).phoneOfNumber("800").cityOfLiving("Москва").build()
         );
         person.add(Person.builder().personPrimaryKey(
                         PersonPrimaryKey.builder().age(25).name("Вика").surname("Михайленко").build()
-                ).phone_of_number("800").city_of_living("Москва").build()
+                ).phoneOfNumber("800").cityOfLiving("Москва").build()
         );
         person.add(Person.builder().personPrimaryKey(
                         PersonPrimaryKey.builder().age(28).name("Олег").surname("Миха").build()
-                ).phone_of_number("800").city_of_living("Москва").build()
+                ).phoneOfNumber("800").cityOfLiving("Москва").build()
         );
         person.forEach(entityManager::persist);
     }
