@@ -1,7 +1,11 @@
 package sys.tem.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import javax.persistence.EmbeddedId;
 
 @Data
 @Builder
